@@ -1,0 +1,297 @@
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Performance data - Get into teaching
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+	<span class="govuk-caption-xl">Performance data</span>
+  	<h1 class="govuk-heading-xl">
+    Get into Teaching
+  	</h1>
+	  <p class="govuk-body-l">
+	    Use this screen to edit the values displayed on the performance dashboard.
+	  </p>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		{{ govukInput({
+		  label: {
+		    text: "Total visitors"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+
+		{{ govukInput({
+		  label: {
+		    text: "Total visitors % change "
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+      </div>
+      <div class="govuk-grid-column-one-third">
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> {{ govukInput({
+		  label: {
+		    text: "Total registrations"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+
+		{{ govukInput({
+		  label: {
+		    text: "Total registrations % change "
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+      </div>
+      <div class="govuk-grid-column-one-third">
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> {{ govukInput({
+		  label: {
+		    text: "Conversion rate"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+
+		{{ govukInput({
+		  label: {
+		    text: "Conversion rate % change "
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+    	<div class="govuk-grid-column-full">
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    	</div>
+    </div>
+
+   <h2 class="govuk-heading-l">Conversion volumes by touchpoint</h2>
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+		{{ govukInput({
+		  label: {
+		    text: "Newsletter signups"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+      </div>
+      <div class="govuk-grid-column-one-third">
+		{{ govukInput({
+		  label: {
+		    text: "Event registrations"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+      </div>
+      <div class="govuk-grid-column-one-third">
+		{{ govukInput({
+		  label: {
+		    text: "Application referrals"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+    	<div class="govuk-grid-column-full">
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    	</div>
+    </div>
+    <h2 class="govuk-heading-l">Conversion rate by subject</h2>
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+		{{ govukInput({
+		  label: {
+		    text: "Maths conversion rate"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Maths total visitors"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Maths % change"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+      </div>
+      <div class="govuk-grid-column-one-third">
+		{{ govukInput({
+		  label: {
+		    text: "Physics conversion rate"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Physics total visitors"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Physics % change"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+      </div>
+      <div class="govuk-grid-column-one-third">
+		{{ govukInput({
+		  label: {
+		    text: "Chemistry conversion rate"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Chemistry total visitors"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Chemistry % change"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+      </div>
+    </div>
+       <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+      	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		{{ govukInput({
+		  label: {
+		    text: "Langauges conversion rate"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Lanagauges total visitors"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Languages % change"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+      </div>
+      <div class="govuk-grid-column-one-third">
+      	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		{{ govukInput({
+		  label: {
+		    text: "Computing conversion rate"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Computing total visitors"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Computing % change"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+      </div>
+      <div class="govuk-grid-column-one-third">
+      	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		{{ govukInput({
+		  label: {
+		    text: "Biology conversion rate"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Biology total visitors"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-5",
+		  name: "width-5"
+		}) }}
+		{{ govukInput({
+		  label: {
+		    text: "Biology % change"
+		  },
+		  classes: "govuk-input--width-5",
+		  id: "width-2",
+		  name: "width-2"
+		}) }}
+      </div>
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    {{ govukButton({
+	  text: "Save performance data"
+	}) }}
+
+  </main>
+</div>
+
+{% endblock %}
