@@ -324,6 +324,53 @@
     	</div>
     </div>
     <h2 class="govuk-heading-l">Conversion rate by subject</h2>
+       <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+	  <div class="govuk-accordion__section ">
+	    <div class="govuk-accordion__section-header">
+	      <h2 class="govuk-accordion__section-heading">
+	        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+	          Filter by region
+	        </span>
+	      </h2>
+	    </div>
+	    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+			{{ govukCheckboxes({
+			  idPrefix: "organisation",
+			  name: "organisation",
+			  classes: "govuk-checkboxes--small",
+			  fieldset: {
+			    legend: {
+			      text: "Regions",
+			      isPageHeading: true,
+			      classes: "govuk-fieldset__legend--m"
+			    }
+			  },
+			  items: [
+			    {
+			      value: "east",
+			      text: "East of England"
+			    },
+			    {
+			      value: "london",
+			      text: "Greater London"
+			    },
+			    {
+			      value: "mideast",
+			      text: "Midland East"
+			    },
+			    {
+			      value: "northeast",
+			      text: "North East"
+			    },
+			    {
+			      value: "northwest",
+			      text: "North West"
+			    }
+			  ]
+			}) }}
+	    </div>
+	  </div>
+	</div>
    <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third">
 		<h3 class="govuk-heading-m">Maths</h3>
