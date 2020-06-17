@@ -1,0 +1,226 @@
+{% extends "layout.html" %}
+
+
+
+{% block pageTitle %}
+  Apply for teacher training: step by step
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% from 'govuk/components/header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Apply for teacher training",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      
+    ]
+  }) }}
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="https://www.gov.uk">Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Apply for teacher training</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Apply for teacher training: step by step
+    </h1>
+
+    <p>
+      Check if you're eligable to apply for teacher training, how to find a course and how to apply.
+    </p>
+
+    <div id="step-by-step-navigation" class="app-step-nav app-step-nav--large app-step-nav--active" data-show-text="Show" data-hide-text="Hide" data-show-all-text="Show all" data-hide-all-text="Hide all">
+      <ol class="app-step-nav__steps">
+        <li class="app-step-nav__step js-step" id="check-youre-allowed-to-drive" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="1">
+            <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 1
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Check if you're eligable to apply for teacher training
+              </span>
+            </h2>
+          </div>
+
+          <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-check-youre-allowed-to-drive-1">
+            <p class="app-step-nav__paragraph">To be eligible for teacher training, you need these qualifications (or their non-UK equivalents):</p>
+
+            <ul class="" data-length="3">
+              <li class="app-step-nav__list-item js-list-item ">
+                a degree
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                grade 4 (C) or above in English and maths GCSEs
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                grade 4 (C) or above in GCSE science if you want to teach primary
+              </li>
+            </ul>
+            <p>If you do not have a degree you can teach in further education (age 14 to adult), or study for a degree leading to qualified teacher status. <a href="https://getintoteaching.education.gov.uk/eligibility-for-teacher-training">Learn more about eligibility for teacher training.</a></p>
+
+            <p>If you're unsure about your eligibility, you can <a href="https://getintoteaching.education.gov.uk/get-help-and-support/teacher-training-advisers">get support from an expert adviser</a>.</p>
+          </div>
+
+        </li>
+
+        <li class="app-step-nav__step js-step" id="get-a-provisional-licence" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="2">
+            <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 2
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Find a teacher training course
+              </span>
+            </h2>
+          </div>
+
+          <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-get-a-provisional-licence-2">
+            <p class="app-step-nav__paragraph">Postgraduate teacher training courses are available across England, led by universities or schools. The course you choose will depend on your subject, degree class and location. </p>
+            <ol class="app-step-nav__list " data-length="1">
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="2.1" class="app-step-nav__link js-link" href="https://www.find-postgraduate-teacher-training.service.gov.uk/">Find postgraduate teacher training courses</a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="2.2" class="app-step-nav__link js-link" href="https://getintoteaching.education.gov.uk/explore-my-options/postgraduate-teacher-training-courses/teacher-training-courses">Get advice on choosing the right course</a>
+              </li>
+            </ol>
+          </div>
+
+        </li>
+
+        <li class="app-step-nav__step js-step" id="driving-lessons-and-practice" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="3">
+            <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 3
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Apply
+              </span>
+            </h2>
+          </div>
+
+          <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-driving-lessons-and-practice-3">
+            <p class="app-step-nav__paragraph">Once you have found a teacher training course you can start your application.</p>
+
+            <p class="app-step-nav__paragraph">Depending on the course you select, you may have an option to apply through a new GOV.UK service called 'Apply for teacher training' or through UCAS. The Apply for teacher training service will eventually replace UCAS.</p>
+
+            <p class="app-step-nav__paragraph">As part of your application you will need to write a personal statement and arrange references.</p>
+
+            <ol class="app-step-nav__list " data-length="4">
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="3.1" class="app-step-nav__link js-link" href="https://getintoteaching.education.gov.uk/how-to-apply-for-teacher-training/preparing-your-teacher-training-personal-statement">Preparing your personal statement</a>
+              </li>
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="3.2" class="app-step-nav__link js-link" href="https://getintoteaching.education.gov.uk/how-to-apply-for-teacher-training/arranging-your-teacher-training-references">Arranging your references</a>
+              </li>
+            </ol>
+            <p class="app-step-nav__paragraph">You should get a decision within 40 days from when you apply.</p>
+          </div>
+
+        </li>
+
+        
+
+        <li class="app-step-nav__step js-step" id="book-and-manage-your-driving-test" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="6">
+            <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 4
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Attend an interview
+              </span>
+            </h2>
+          </div>
+
+          <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-book-and-manage-your-driving-test-6">
+            <p class="app-step-nav__paragraph">After you have submitted your application you may be asked to attend an interview with the school or university providing the training.</p>
+
+            <ol class="app-step-nav__list " data-length="5">
+              <li class="app-step-nav__list-item js-list-item ">
+                <a data-position="6.1" class="app-step-nav__link js-link" href="https://getintoteaching.education.gov.uk/how-to-apply/preparing-for-your-teacher-training-interview">Preparing for your interview</a>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+        </li>
+
+        <li class="app-step-nav__step js-step" id="when-you-pass" >
+          <div class="app-step-nav__header js-toggle-panel" data-position="7">
+            <h2 class="app-step-nav__title">
+              <span class="app-step-nav__circle app-step-nav__circle--number">
+                <span class="app-step-nav__circle-inner">
+                  <span class="app-step-nav__circle-background">
+                    <span class="govuk-visually-hidden">Step</span> 5
+                  </span>
+                </span>
+              </span>
+
+              <span class="js-step-title">
+                Receive and accept your offers
+              </span>
+            </h2>
+          </div>
+
+          <div class="app-step-nav__panel js-panel js-hidden" id="step-panel-when-you-pass-7">
+            <p class="app-step-nav__paragraph">[Overview of what happens when a user receives an offer, how to accept and also link to how to prepare for teacher training]</p>
+          </div>
+
+        </li>
+      </ol>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
