@@ -4,9 +4,18 @@
   Apply for an early career payment
 {% endblock %}
 
+{% from 'govuk/components/header/macro.njk' import govukHeader %}
+
 {% block header %}
-  <!-- Blank header with no service name for the start page -->
-  {{ govukHeader() }}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "Teachers: Apply for an early career payment",
+    serviceUrl: "#",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      
+    ]
+  }) }}
 {% endblock %}
 
 {% block content %}
@@ -23,7 +32,7 @@
         <li>claim a payment if you have recently completed your teacher training</li>
       </ul>
 
-      <p>Registering takes around 15 minutes.</p>
+      <p>It usually takes 15 minutes to apply. You may find out if you’re eligible straight away, but it can take up to 7 days.</p>
 
       <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
         Start now
