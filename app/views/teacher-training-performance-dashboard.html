@@ -1,0 +1,457 @@
+{% extends "layout.html" %}
+
+
+
+{% block pageTitle %}
+  Performance dashboard for teacher training
+{% endblock %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+{% from 'govuk/components/header/macro.njk' import govukHeader %}
+
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/",
+    serviceName: "",
+    serviceUrl: "/",
+    containerClasses: "govuk-width-container",
+    navigation: [
+      
+    ]
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+	<span class="govuk-caption-xl">Performance dashboard</span>
+  	<h1 class="govuk-heading-xl">
+    Apply for teacher training
+  	</h1>
+	<p class="govuk-body-l">
+	  This dashboard shows information about the recruitment of candidates into teacher training.
+	</p>
+
+	<div class="govuk-grid-row">
+	  <div class="govuk-grid-column-full">
+	    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      </div>
+    </div>
+
+    <h2 class="govuk-heading-l">Applications for training Sept 2020 - present </h2>
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-one-third">
+		<h2><a href="#">Completion rate</a></h2>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">38%</p>
+		<p class="govuk-caption-m">7300 completed applications</p>
+		<p class="gov-uk body govuk-!-font-size-36 govuk-!-font-weight-bold" style="color:#00703c;">+4%</p>
+		
+      </div>
+      <div class="govuk-grid-column-one-third">
+		<h2><a href="#">Places accepted</a></h2>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">2701</p>
+		<p class="govuk-caption-m">6% not accepted, 20% pending</p>
+		<p class="gov-uk body govuk-!-font-size-36 govuk-!-font-weight-bold" style="color:#00703c;">+4%</p>
+		
+      </div>
+      
+      <div class="govuk-grid-column-one-third">
+		<h2><a href="#">Cost per transaction</a></h2>
+		<p class="ovuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">£34</p>
+		<p class="govuk-caption-m">Feb 2021</p>
+		<p class="gov-uk body govuk-!-font-size-36 govuk-!-font-weight-bold" style="color:#00703c;">-6%</p>
+		{{ govukDetails({
+		  summaryText: "How this is calculated",
+		  text: "Maths!"
+		}) }}
+      </div>
+    </div>
+
+<div class="govuk-grid-row">
+	  <div class="govuk-grid-column-full">
+    <article class="sc-fzpans cKJzHK"><div class="sc-fzoXzr jYxGEJ"><div class="__react_component_tooltip t7611692c-5b49-4603-8b03-b7a88adb03fe place-right type-dark" id="tooltip-text" data-id="tooltip">
+
+    	<style type="text/css">.__react_component_tooltip {
+  border-radius: 3px;
+  display: inline-block;
+  font-size: 13px;
+  left: -999em;
+  opacity: 0;
+  padding: 8px 21px;
+  position: fixed;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out;
+  top: -999em;
+  visibility: hidden;
+  z-index: 999;
+}
+.__react_component_tooltip.allow_hover, .__react_component_tooltip.allow_click {
+  pointer-events: auto;
+}
+.__react_component_tooltip::before, .__react_component_tooltip::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+.__react_component_tooltip.show {
+  opacity: 0.9;
+  margin-top: 0;
+  margin-left: 0;
+  visibility: visible;
+}
+.__react_component_tooltip.place-top::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -10px;
+}
+.__react_component_tooltip.place-bottom::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: -8px;
+  left: 50%;
+  margin-left: -10px;
+}
+.__react_component_tooltip.place-left::before {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  right: -8px;
+  top: 50%;
+  margin-top: -5px;
+}
+.__react_component_tooltip.place-right::before {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  left: -8px;
+  top: 50%;
+  margin-top: -5px;
+}
+.__react_component_tooltip .multi-line {
+  display: block;
+  padding: 2px 0;
+  text-align: center;
+}</style>
+
+<style id="plotly.js-style-global"></style>
+
+<style data-styled="active" data-styled-version="5.1.1"></style>
+
+<style>
+  	.t7611692c-5b49-4603-8b03-b7a88adb03fe {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t7611692c-5b49-4603-8b03-b7a88adb03fe.place-top {
+        margin-top: -10px;
+    }
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-bottom {
+        margin-top: 10px;
+    }
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-left {
+        margin-left: -10px;
+    }
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-right {
+        margin-left: 10px;
+    }
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t7611692c-5b49-4603-8b03-b7a88adb03fe.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+
+
+.eNQuho {
+
+overflow: visible;
+width: auto;
+padding: 0;
+border: none;
+margin: 0;
+-webkit-appearance: none;
+background: transparent;
+font: inherit;
+font-family: "GDS Transport",Arial,sans-serif;
+-webkit-font-smoothing: antialiased;
+margin-right: 40px!important;
+font-size: 1.1875rem!important;
+line-height: 1.31579!important;
+font-weight: 700!important;
+padding-bottom: 2px;
+cursor: pointer;
+outline: none;
+color: rgb(30, 112, 184);
+border-bottom: 4px solid rgb(30, 112, 184);
+}
+.cKJzHK{
+-webkit-font-smoothing: antialiased;
+margin-top: 30px;
+background-color: rgb(248, 248, 248);
+min-height: 450px;
+flex: 1 0 60%;
+padding: 20px;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(243, 242, 241);
+border-image: initial;
+}
+
+.js-plotly-plot .plotly .main-svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+}
+
+  </style></div></div><header class="util-flex util-flex-justify-between util-flex-align-items-center govuk-!-padding-bottom-2 govuk-!-margin-bottom-2"><h2 class="govuk-heading-m govuk-!-margin-bottom-0 ">Applications<span class="govuk-caption-m "></span></h2></header><div class="util-flex util-flex-col undefined"><div class="util-flex util-flex-wrap util-flex-align-items-start govuk-!-margin-bottom-6 undefined"><button class="sc-fzqBZW eNQuho govuk-link govuk-!-font-size-19 govuk-!-margin-right-7 active govuk-!-font-weight-bold" type="link">Daily</button><button class="sc-fzqBZW eNQuho govuk-link govuk-!-font-size-19 govuk-!-margin-right-7 " type="link">Cumulative</button><button class="sc-fzqBZW eNQuho govuk-link govuk-!-font-size-19 govuk-!-margin-right-7 " type="link">Data</button></div><div class="sc-fzqNJr hXQgjp"><article class="sc-fzoyAV fQsatj govuk-grid-row"><div class="js-plotly-plot" style="display: block; height: 350px;"><div class="plot-container plotly"><div class="svg-container" style="position: relative; width: 100%; height: 100%;"><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="811" height="350" style="background: rgba(255, 255, 255, 0);"><defs id="defs-c47fbc"><g class="clips"><clipPath id="clipc47fbcxyplot" class="plotclip"><rect width="716" height="227"></rect></clipPath><clipPath class="axesclip" id="clipc47fbcx"><rect x="80" y="0" width="716" height="350"></rect></clipPath><clipPath class="axesclip" id="clipc47fbcy"><rect x="0" y="10" width="811" height="227"></rect></clipPath><clipPath class="axesclip" id="clipc47fbcxy"><rect x="80" y="10" width="716" height="227"></rect></clipPath></g><g class="gradients"></g></defs><g class="bglayer"><rect class="bg" x="80" y="10" width="716" height="227" style="fill: rgb(231, 231, 231); fill-opacity: 0; stroke-width: 0;"></rect></g><g class="draglayer cursor-crosshair"><g class="xy"><rect class="nsewdrag drag" data-subplot="xy" x="80" y="10" width="716" height="227" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="nwdrag drag cursor-nw-resize" data-subplot="xy" x="60" y="-10" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="nedrag drag cursor-ne-resize" data-subplot="xy" x="796" y="-10" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="swdrag drag cursor-sw-resize" data-subplot="xy" x="60" y="237" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="sedrag drag cursor-se-resize" data-subplot="xy" x="796" y="237" width="20" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="ewdrag drag cursor-ew-resize" data-subplot="xy" x="151.60000000000002" y="237.5" width="572.8000000000001" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="wdrag drag cursor-w-resize" data-subplot="xy" x="80" y="237.5" width="71.60000000000001" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="edrag drag cursor-e-resize" data-subplot="xy" x="724.4" y="237.5" width="71.60000000000001" height="20" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="nsdrag drag cursor-ns-resize" data-subplot="xy" x="59.5" y="32.7" width="20" height="181.60000000000002" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="sdrag drag cursor-s-resize" data-subplot="xy" x="59.5" y="214.3" width="20" height="22.700000000000003" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect><rect class="ndrag drag cursor-n-resize" data-subplot="xy" x="59.5" y="10" width="20" height="22.700000000000003" style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect></g></g><g class="layer-below"><g class="imagelayer"></g><g class="shapelayer"></g></g><g class="cartesianlayer"><g class="subplot xy"><g class="layer-subplot"><g class="shapelayer"></g><g class="imagelayer"></g></g><g class="gridlayer"><g class="x"></g><g class="y"><path class="ygrid crisp" transform="translate(0,191.53)" d="M80,0h716" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" transform="translate(0,146.06)" d="M80,0h716" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" transform="translate(0,100.59)" d="M80,0h716" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ygrid crisp" transform="translate(0,55.13)" d="M80,0h716" style="stroke: rgb(238, 238, 238); stroke-opacity: 1; stroke-width: 1px;"></path></g></g><g class="zerolinelayer"><path class="yzl zl crisp" transform="translate(0,237)" d="M80,0h716" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"></path></g><path class="xlines-below"></path><path class="ylines-below"></path><g class="overlines-below"></g><g class="xaxislayer-below"></g><g class="yaxislayer-below"></g><g class="overaxes-below"></g><g class="plot" transform="translate(80, 10)" clip-path="url('#clipc47fbcxyplot')"><g class="barlayer mlayer"><g class="trace bars" shape-rendering="crispEdges" style="opacity: 1;"><g class="points"><g class="point"><path d="M708.42,227V185.37H715.16V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M700,227V193.37H706.73V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M691.57,227V200.21H698.31V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M683.15,227V194.16H689.89V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M674.72,227V190.04H681.46V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M666.3,227V189.15H673.04V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M657.88,227V187.87H664.62V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M649.45,227V188.32H656.19V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M641.03,227V194.53H647.77V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M632.61,227V199.08H639.35V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M624.18,227V192.46H630.92V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M615.76,227V190.24H622.5V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M607.34,227V190.57H614.08V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M598.91,227V187.72H605.65V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M590.49,227V187.85H597.23V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M582.07,227V197.71H588.8V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M573.64,227V199H580.38V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M565.22,227V194.59H571.96V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M556.8,227V192.72H563.53V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M548.37,227V191H555.11V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M539.95,227V190.87H546.69V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M531.52,227V192.3H538.26V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M523.1,227V199.72H529.84V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M514.68,227V201.97H521.42V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M506.25,227V198.12H512.99V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M497.83,227V193.28H504.57V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M489.41,227V192.5H496.15V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M480.98,227V194.56H487.72V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M472.56,227V199.98H479.3V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M464.14,227V202.65H470.88V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M455.71,227V202.02H462.45V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M447.29,227V197.69H454.03V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M438.87,227V194.34H445.6V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M430.44,227V192.69H437.18V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M422.02,227V192.17H428.76V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M413.6,227V194.99H420.33V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M405.17,227V200.78H411.91V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M396.75,227V204.5H403.49V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M388.32,227V198.31H395.06V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M379.9,227V193.06H386.64V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M371.48,227V197.71H378.22V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M363.05,227V198.06H369.79V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M354.63,227V197.83H361.37V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M346.21,227V203.85H352.95V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M337.78,227V203.06H344.52V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M329.36,227V201.16H336.1V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M320.94,227V197.45H327.68V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M312.51,227V196.46H319.25V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M304.09,227V197.29H310.83V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M295.67,227V197.58H302.4V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M287.24,227V202.57H293.98V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M278.82,227V203.48H285.56V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M270.4,227V201.49H277.13V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M261.97,227V191.45H268.71V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M253.55,227V190.85H260.29V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M245.12,227V197.76H251.86V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M236.7,227V205.5H243.44V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M228.28,227V212.05H235.02V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M219.85,227V210.66H226.59V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M211.43,227V210.69H218.17V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M203.01,227V207.01H209.75V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M194.58,227V208.48H201.32V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M186.16,227V208.73H192.9V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M177.74,227V208.76H184.48V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M169.31,227V213.44H176.05V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M160.89,227V214.76H167.63V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M152.47,227V212.03H159.2V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M144.04,227V211.26H150.78V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M135.62,227V210.85H142.36V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M127.2,227V212.3H133.93V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M118.77,227V214.31H125.51V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M110.35,227V216.01H117.09V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M101.92,227V216.07H108.66V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M93.5,227V213.34H100.24V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M85.08,227V212.55H91.82V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M76.65,227V211.37H83.39V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M68.23,227V213.18H74.97V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M59.81,227V214.94H66.55V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M51.38,227V215.31H58.12V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M42.96,227V216.39H49.7V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M34.54,227V213.27H41.28V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g><g class="point"><path d="M26.11,227V214.62H32.85V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g></g></g><g class="trace bars" shape-rendering="crispEdges" style="opacity: 1;"><g class="points"><g class="point"><path d="M708.42,185.37V103.51H715.16V185.37Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M700,193.37V122.32H706.73V193.37Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M691.57,200.21V112.49H698.31V200.21Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M683.15,194.16V90.93H689.89V194.16Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M674.72,190.04V105.48H681.46V190.04Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M666.3,189.15V117.88H673.04V189.15Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M657.88,187.87V146.79H664.62V187.87Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M649.45,188.32V139.4H656.19V188.32Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M641.03,194.53V159.07H647.77V194.53Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M632.61,199.08V157.95H639.35V199.08Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M624.18,192.46V117.38H630.92V192.46Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M615.76,190.24V102.29H622.5V190.24Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M607.34,190.57V97.47H614.08V190.57Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M598.91,187.72V91.33H605.65V187.72Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M590.49,187.85V109.63H597.23V187.85Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M582.07,197.71V162.31H588.8V197.71Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M573.64,199V119.68H580.38V199Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M565.22,194.59V122.13H571.96V194.59Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M556.8,192.72V70.1H563.53V192.72Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M548.37,191V81.85H555.11V191Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M539.95,190.87V66.66H546.69V190.87Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M531.52,192.3V106.15H538.26V192.3Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M523.1,199.72V136.42H529.84V199.72Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M514.68,201.97V135.46H521.42V201.97Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M506.25,198.12V124.65H512.99V198.12Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M497.83,193.28V115.6H504.57V193.28Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M489.41,192.5V111.85H496.15V192.5Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M480.98,194.56V125.59H487.72V194.56Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M472.56,199.98V122.87H479.3V199.98Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M464.14,202.65V131.14H470.88V202.65Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M455.71,202.02V159.96H462.45V202.02Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M447.29,197.69V129.64H454.03V197.69Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M438.87,194.34V129.18H445.6V194.34Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M430.44,192.69V110.57H437.18V192.69Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M422.02,192.17V131.95H428.76V192.17Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M413.6,194.99V87.31H420.33V194.99Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M405.17,200.78V168.46H411.91V200.78Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M396.75,204.5V137.3H403.49V204.5Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M388.32,198.31V145.64H395.06V198.31Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M379.9,193.06V131.39H386.64V193.06Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M371.48,197.71V129.98H378.22V197.71Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M363.05,198.06V132.12H369.79V198.06Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M354.63,197.83V153.3H361.37V197.83Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M346.21,203.85V154.43H352.95V203.85Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M337.78,203.06V138.06H344.52V203.06Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M329.36,201.16V144.19H336.1V201.16Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M320.94,197.45V140.71H327.68V197.45Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M312.51,196.46V142.65H319.25V196.46Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M304.09,197.29V151.93H310.83V197.29Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M295.67,197.58V166.48H302.4V197.58Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M287.24,202.57V156.03H293.98V202.57Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M278.82,203.48V150.09H285.56V203.48Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M270.4,201.49V157.44H277.13V201.49Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M261.97,191.45V132.44H268.71V191.45Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M253.55,190.85V118.53H260.29V190.85Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M245.12,197.76V153.83H251.86V197.76Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M236.7,205.5V179.54H243.44V205.5Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M228.28,212.05V189.05H235.02V212.05Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M219.85,210.66V193.33H226.59V210.66Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M211.43,210.69V200.58H218.17V210.69Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M203.01,207.01V201.33H209.75V207.01Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M194.58,208.48V201.52H201.32V208.48Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M186.16,208.73V206.02H192.9V208.73Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M177.74,208.76V206.3H184.48V208.76Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M169.31,213.44V211.21H176.05V213.44Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M160.89,214.76V209.43H167.63V214.76Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M152.47,212.03V207.68H159.2V212.03Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M144.04,211.26V207.83H150.78V211.26Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M135.62,210.85V207.99H142.36V210.85Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M127.2,212.3V210.19H133.93V212.3Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M118.77,215V212.46H125.51V215Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M110.35,216.01V213.75H117.09V216.01Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M101.92,216.07V213.81H108.66V216.07Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M93.5,213.34V210.95H100.24V213.34Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M85.08,213V210.87H91.82V213Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M76.65,212V209.86H83.39V212Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M68.23,214V212H74.97V214Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M59.81,215V213H66.55V215Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M51.38,216V214H58.12V216Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M42.96,217V215H49.7V217Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M34.54,214V212H41.28V214Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M26.11,215V214H32.85V215Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M17.69,227V226H24.43V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M9.27,227V226H16V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g><g class="point"><path d="M0.84,227V226H7.58V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g></g></g><g class="trace bars" shape-rendering="crispEdges" style="opacity: 1;"><g class="points"><g class="point"><path d="M708.42,103.51V71.68H715.16V103.51Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M700,122.32V98.6H706.73V122.32Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M691.57,112.49V103.48H698.31V112.49Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M683.15,90.93V72.35H689.89V90.93Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M674.72,105.48V68.05H681.46V105.48Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M666.3,117.88V77.05H673.04V117.88Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M657.88,146.79V106.7H664.62V146.79Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M649.45,139.4V103.12H656.19V139.4Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M641.03,159.07V133.44H647.77V159.07Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M632.61,157.95V145.71H639.35V157.95Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M624.18,117.38V97.98H630.92V117.38Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M615.76,102.29V59.6H622.5V102.29Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M607.34,97.47V55.19H614.08V97.47Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M598.91,91.33V52.24H605.65V91.33Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M590.49,109.63V75.85H597.23V109.63Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M582.07,162.31V136.86H588.8V162.31Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M573.64,119.68V104.5H580.38V119.68Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M565.22,122.13V101.47H571.96V122.13Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M556.8,70.1V32.26H563.53V70.1Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M548.37,81.85V42.84H555.11V81.85Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M539.95,66.66V29.94H546.69V66.66Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M531.52,106.15V73.4H538.26V106.15Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M523.1,136.42V108.82H529.84V136.42Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g><g class="point"><path d="M514.68,135.46V114.44H521.42V135.46Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g></g></g><g class="trace bars" shape-rendering="crispEdges" style="opacity: 1;"><g class="points"><g class="point"><path d="M708.42,71.68V15.95H715.16V71.68Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M700,98.6V11.35H706.73V98.6Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M691.57,103.48V100H698.31V103.48Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M683.15,72.35V67.84H689.89V72.35Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M674.72,68.05V17.34H681.46V68.05Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M666.3,77.05V72.77H673.04V77.05Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M657.88,106.7V102.86H664.62V106.7Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M649.45,103.12V99.36H656.19V103.12Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M641.03,133.44V124.14H647.77V133.44Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M632.61,145.71V142.28H639.35V145.71Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M624.18,97.98V95.26H630.92V97.98Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M615.76,59.6V55.32H622.5V59.6Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M607.34,55.19V51.26H614.08V55.19Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M598.91,52.24V47.85H605.65V52.24Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M590.49,75.85V72.06H597.23V75.85Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M582.07,136.86V133.4H588.8V136.86Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M573.64,104.5V101.34H580.38V104.5Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M565.22,101.47V97.76H571.96V101.47Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M556.8,32.26V28.59H563.53V32.26Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M548.37,42.84V38.55H555.11V42.84Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M539.95,29.94V26.89H546.69V29.94Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M531.52,73.4V70.74H538.26V73.4Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M523.1,108.82V103.65H529.84V108.82Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M514.68,114.44V110.2H521.42V114.44Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M506.25,124.65V121.76H512.99V124.65Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M497.83,115.6V110.85H504.57V115.6Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M489.41,111.85V107.46H496.15V111.85Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M480.98,125.59V118.25H487.72V125.59Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M472.56,122.87V120.59H479.3V122.87Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M464.14,131.14V126.99H470.88V131.14Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M455.71,159.96V159.96H462.45V159.96Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M447.29,129.64V126.6H454.03V129.64Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M438.87,129.18V120.98H445.6V129.18Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M430.44,110.57V99.24H437.18V110.57Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M422.02,131.95V110.29H428.76V131.95Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M413.6,87.31V65.84H420.33V87.31Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M405.17,168.46V145.35H411.91V168.46Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M396.75,138V135.45H403.49V138Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M388.32,145.64V142.91H395.06V145.64Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M379.9,131.39V102.88H386.64V131.39Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M371.48,129.98V105.34H378.22V129.98Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M363.05,132.12V112.36H369.79V132.12Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M354.63,153.3V147.83H361.37V153.3Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M346.21,154.43V149.44H352.95V154.43Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M337.78,138.06V135.62H344.52V138.06Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M329.36,145V142.58H336.1V145Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M320.94,141V138.9H327.68V141Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M312.51,142.65V138.76H319.25V142.65Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M304.09,151.93V148.26H310.83V151.93Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M295.67,166.48V163.83H302.4V166.48Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M287.24,156.03V149.88H293.98V156.03Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M278.82,151V149H285.56V151Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M270.4,157.44V157.44H277.13V157.44Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M261.97,133V130.66H268.71V133Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M253.55,118.53V115.74H260.29V118.53Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M245.12,154V152H251.86V154Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M236.7,180V179H243.44V180Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M228.28,190V187.39H235.02V190Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M219.85,193.33V193.33H226.59V193.33Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M211.43,200.58V200.58H218.17V200.58Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M203.01,202V200H209.75V202Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M194.58,202V201H201.32V202Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M186.16,207V205H192.9V207Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M177.74,207V206H184.48V207Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M169.31,212V210H176.05V212Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M160.89,209.43V209.43H167.63V209.43Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M152.47,208V207H159.2V208Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M144.04,208V207H150.78V208Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M135.62,208V207H142.36V208Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M127.2,211V210H133.93V211Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M118.77,212.46V212.46H125.51V212.46Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M110.35,214V213H117.09V214Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M101.92,214V213H108.66V214Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M93.5,211V210H100.24V211Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M85.08,211V210H91.82V211Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M76.65,210V209H83.39V210Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M68.23,212.05V212.05H74.97V212.05Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M59.81,214V213H66.55V214Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M51.38,215V214H58.12V215Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M42.96,216V214H49.7V216Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M34.54,213V212H41.28V213Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M26.11,214V213H32.85V214Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M17.69,227V226H24.43V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g><g class="point"><path d="M9.27,227V226H16V227Z" style="vector-effect: non-scaling-stroke; opacity: 1; stroke-width: 0px; fill: rgb(212, 53, 28); fill-opacity: 1;"></path></g></g></g></g></g><g class="overplot"></g><path class="xlines-above crisp" d="" style="fill: none; stroke-width: 1px; stroke: rgb(0, 0, 0); stroke-opacity: 0;"></path><path class="ylines-above crisp" d="" style="fill: none; stroke-width: 1px; stroke: rgb(0, 0, 0); stroke-opacity: 0;"></path><g class="overlines-above"></g><g class="xaxislayer-above"><path class="xtick ticks crisp" d="M0,238v5" transform="translate(176.87,0)" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"></path><path class="xtick ticks crisp" d="M0,238v5" transform="translate(294.8,0)" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"></path><path class="xtick ticks crisp" d="M0,238v5" transform="translate(412.73,0)" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"></path><path class="xtick ticks crisp" d="M0,238v5" transform="translate(530.6600000000001,0)" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"></path><path class="xtick ticks crisp" d="M0,238v5" transform="translate(648.59,0)" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"></path><path class="xtick ticks crisp" d="M0,238v5" transform="translate(766.52,0)" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; stroke-width: 1px;"></path><g class="xtick"><text text-anchor="middle" x="0" y="259.8" data-unformatted="12 Apr" data-math="N" transform="translate(176.87,0)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">12 Apr</text></g><g class="xtick"><text text-anchor="middle" x="0" y="259.8" data-unformatted="26 Apr" data-math="N" transform="translate(294.8,0)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">26 Apr</text></g><g class="xtick"><text text-anchor="middle" x="0" y="259.8" data-unformatted="10 May" data-math="N" transform="translate(412.73,0)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">10 May</text></g><g class="xtick"><text text-anchor="middle" x="0" y="259.8" data-unformatted="24 May" data-math="N" transform="translate(530.6600000000001,0)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">24 May</text></g><g class="xtick"><text text-anchor="middle" x="0" y="259.8" data-unformatted="07 Jun" data-math="N" transform="translate(648.59,0)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">07 Jun</text></g><g class="xtick"><text text-anchor="middle" x="0" y="259.8" data-unformatted="21 Jun" data-math="N" transform="translate(766.52,0)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">21 Jun</text></g></g><g class="yaxislayer-above"><path class="ytick ticks crisp" d="M79,0h-5" transform="translate(0,237)" style="stroke: rgb(241, 241, 241); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ytick ticks crisp" d="M79,0h-5" transform="translate(0,191.53)" style="stroke: rgb(241, 241, 241); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ytick ticks crisp" d="M79,0h-5" transform="translate(0,146.06)" style="stroke: rgb(241, 241, 241); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ytick ticks crisp" d="M79,0h-5" transform="translate(0,100.59)" style="stroke: rgb(241, 241, 241); stroke-opacity: 1; stroke-width: 1px;"></path><path class="ytick ticks crisp" d="M79,0h-5" transform="translate(0,55.13)" style="stroke: rgb(241, 241, 241); stroke-opacity: 1; stroke-width: 1px;"></path><g class="ytick"><text text-anchor="end" x="71.2" y="4.8999999999999995" data-unformatted="0" data-math="N" transform="translate(0,237)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">0</text></g><g class="ytick"><text text-anchor="end" x="71.2" y="4.8999999999999995" data-unformatted="50,000" data-math="N" transform="translate(0,191.53)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">50,000</text></g><g class="ytick"><text text-anchor="end" x="71.2" y="4.8999999999999995" data-unformatted="100,000" data-math="N" transform="translate(0,146.06)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">100,000</text></g><g class="ytick"><text text-anchor="end" x="71.2" y="4.8999999999999995" data-unformatted="150,000" data-math="N" transform="translate(0,100.59)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">150,000</text></g><g class="ytick"><text text-anchor="end" x="71.2" y="4.8999999999999995" data-unformatted="200,000" data-math="N" transform="translate(0,55.13)" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 14px; fill: rgb(111, 119, 123); fill-opacity: 1; white-space: pre;">200,000</text></g></g><g class="overaxes-above"></g></g></g><g class="polarlayer"></g><g class="ternarylayer"></g><g class="geolayer"></g><g class="funnelarealayer"></g><g class="pielayer"></g><g class="treemaplayer"></g><g class="sunburstlayer"></g><g class="glimages"></g></svg><div class="gl-container"></div><svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="811" height="350"><defs id="topdefs-c47fbc"><g class="clips"></g><clipPath id="legendc47fbc"><rect width="705" height="58" x="0" y="0"></rect></clipPath></defs><g class="indicatorlayer"></g><g class="layer-above"><g class="imagelayer"></g><g class="shapelayer"></g></g><g class="infolayer"><g class="legend" pointer-events="all" transform="translate(80, 282.4)"><rect class="bg" shape-rendering="crispEdges" width="705" height="58" x="0" y="0" style="stroke: rgb(68, 68, 68); stroke-opacity: 1; fill: rgb(255, 255, 255); fill-opacity: 0; stroke-width: 0px;"></rect><g class="scrollbox" transform="translate(0, 0)" clip-path="url('#legendc47fbc')"><g class="groups"><g class="traces" transform="translate(0, 16.9)" style="opacity: 1;"><text class="legendtext user-select-none" text-anchor="start" x="40" y="6.24" data-unformatted="Applications started" data-math="N" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 16px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;">Applications started</text><g class="layers" style="opacity: 1;"><g class="legendfill"></g><g class="legendlines"></g><g class="legendsymbols"><g class="legendpoints"><path class="legendundefined" d="M6,6H-6V-6H6Z" transform="translate(20,0)" style="stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g></g></g><rect class="legendtoggle" pointer-events="all" x="0" y="-11.9" width="179.3125" height="23.8" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"></rect></g><g class="traces" transform="translate(234.734375, 16.9)" style="opacity: 1;"><text class="legendtext user-select-none" text-anchor="start" x="40" y="6.24" data-unformatted="Applications in progress" data-math="N" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 16px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;">Active applications</text><g class="layers" style="opacity: 1;"><g class="legendfill"></g><g class="legendlines"></g><g class="legendsymbols"><g class="legendpoints"><path class="legendundefined" d="M6,6H-6V-6H6Z" transform="translate(20,0)" style="stroke-width: 0px; fill: rgb(86, 148, 202); fill-opacity: 1;"></path></g></g></g><rect class="legendtoggle" pointer-events="all" x="0" y="-11.9" width="156.828125" height="23.8" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"></rect></g><g class="traces" transform="translate(469.46875, 16.9)" style="opacity: 1;"><text class="legendtext user-select-none" text-anchor="start" x="40" y="6.24" data-unformatted="Commercial partner testing" data-math="N" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 16px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;">Applications submitted</text><g class="layers" style="opacity: 1;"><g class="legendfill"></g><g class="legendlines"></g><g class="legendsymbols"><g class="legendpoints"><path class="legendundefined" d="M6,6H-6V-6H6Z" transform="translate(20,0)" style="stroke-width: 0px; fill: rgb(255, 221, 0); fill-opacity: 1;"></path></g></g></g><rect class="legendtoggle" pointer-events="all" x="0" y="-11.9" width="232.234375" height="23.8" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"></rect></g>
+
+<!--   <g class="traces" transform="translate(0, 40.7)" style="opacity: 1;"><text class="legendtext user-select-none" text-anchor="start" x="40" y="6.24" data-unformatted="NHS and PHE testing" data-math="N" style="font-family: &quot;GDS Transport&quot;, Arial, sans-serif; font-size: 16px; fill: rgb(68, 68, 68); fill-opacity: 1; white-space: pre;">NHS and PHE testing</text><g class="layers" style="opacity: 1;"><g class="legendfill"></g><g class="legendlines"></g><g class="legendsymbols"><g class="legendpoints"><path class="legendundefined" d="M6,6H-6V-6H6Z" transform="translate(20,0)" style="stroke-width: 0px; fill: rgb(0, 48, 120); fill-opacity: 1;"></path></g></g></g><rect class="legendtoggle" pointer-events="all" x="0" y="-11.9" width="190.5625" height="23.8" style="cursor: pointer; fill: rgb(0, 0, 0); fill-opacity: 0;"></rect></g> -->
+
+</g></g><rect class="scrollbar" rx="20" ry="3" width="0" height="0" x="0" y="0" style="fill: rgb(128, 139, 164); fill-opacity: 1;"></rect></g><g class="g-gtitle"></g><g class="g-xtitle"></g><g class="g-ytitle"></g></g><g class="menulayer"></g><g class="zoomlayer"></g></svg>
+
+  <!-- <div class="modebar-container" style="position: absolute; top: 0px; right: 0px; width: 100%;"><div id="modebar-c47fbc" class="modebar modebar--hover ease-bg"><div class="modebar-group"><a rel="tooltip" class="modebar-btn" data-title="Download plot as a png" data-toggle="false" data-gravity="n"><svg viewBox="0 0 1000 1000" class="icon" height="1em" width="1em"><path d="m500 450c-83 0-150-67-150-150 0-83 67-150 150-150 83 0 150 67 150 150 0 83-67 150-150 150z m400 150h-120c-16 0-34 13-39 29l-31 93c-6 15-23 28-40 28h-340c-16 0-34-13-39-28l-31-94c-6-15-23-28-40-28h-120c-55 0-100-45-100-100v-450c0-55 45-100 100-100h800c55 0 100 45 100 100v450c0 55-45 100-100 100z m-400-550c-138 0-250 112-250 250 0 138 112 250 250 250 138 0 250-112 250-250 0-138-112-250-250-250z m365 380c-19 0-35 16-35 35 0 19 16 35 35 35 19 0 35-16 35-35 0-19-16-35-35-35z" transform="matrix(1 0 0 -1 0 850)"></path></svg></a></div><div class="modebar-group"><a rel="tooltip" class="modebar-btn active" data-title="Zoom" data-attr="dragmode" data-val="zoom" data-toggle="false" data-gravity="n"><svg viewBox="0 0 1000 1000" class="icon" height="1em" width="1em"><path d="m1000-25l-250 251c40 63 63 138 63 218 0 224-182 406-407 406-224 0-406-182-406-406s183-406 407-406c80 0 155 22 218 62l250-250 125 125z m-812 250l0 438 437 0 0-438-437 0z m62 375l313 0 0-312-313 0 0 312z" transform="matrix(1 0 0 -1 0 850)"></path></svg></a><a rel="tooltip" class="modebar-btn" data-title="Pan" data-attr="dragmode" data-val="pan" data-toggle="false" data-gravity="n"><svg viewBox="0 0 1000 1000" class="icon" height="1em" width="1em"><path d="m1000 350l-187 188 0-125-250 0 0 250 125 0-188 187-187-187 125 0 0-250-250 0 0 125-188-188 186-187 0 125 252 0 0-250-125 0 187-188 188 188-125 0 0 250 250 0 0-126 187 188z" transform="matrix(1 0 0 -1 0 850)"></path></svg></a></div><div class="modebar-group"><a rel="tooltip" class="modebar-btn" data-title="Zoom in" data-attr="zoom" data-val="in" data-toggle="false" data-gravity="n"><svg viewBox="0 0 875 1000" class="icon" height="1em" width="1em"><path d="m1 787l0-875 875 0 0 875-875 0z m687-500l-187 0 0-187-125 0 0 187-188 0 0 125 188 0 0 187 125 0 0-187 187 0 0-125z" transform="matrix(1 0 0 -1 0 850)"></path></svg></a><a rel="tooltip" class="modebar-btn" data-title="Zoom out" data-attr="zoom" data-val="out" data-toggle="false" data-gravity="n"><svg viewBox="0 0 875 1000" class="icon" height="1em" width="1em"><path d="m0 788l0-876 875 0 0 876-875 0z m688-500l-500 0 0 125 500 0 0-125z" transform="matrix(1 0 0 -1 0 850)"></path></svg></a><a rel="tooltip" class="modebar-btn" data-title="Reset axes" data-attr="zoom" data-val="reset" data-toggle="false" data-gravity="n"><svg viewBox="0 0 928.6 1000" class="icon" height="1em" width="1em"><path d="m786 296v-267q0-15-11-26t-25-10h-214v214h-143v-214h-214q-15 0-25 10t-11 26v267q0 1 0 2t0 2l321 264 321-264q1-1 1-4z m124 39l-34-41q-5-5-12-6h-2q-7 0-12 3l-386 322-386-322q-7-4-13-4-7 2-12 7l-35 41q-4 5-3 13t6 12l401 334q18 15 42 15t43-15l136-114v109q0 8 5 13t13 5h107q8 0 13-5t5-13v-227l122-102q5-5 6-12t-4-13z" transform="matrix(1 0 0 -1 0 850)"></path></svg></a></div><div class="modebar-group"><a rel="tooltip" class="modebar-btn active" data-title="Compare data on hover" data-attr="hovermode" data-val="x" data-toggle="false" data-gravity="ne"><svg viewBox="0 0 1125 1000" class="icon" height="1em" width="1em"><path d="m187 786l0 2-187-188 188-187 0 0 937 0 0 373-938 0z m0-499l0 1-187-188 188-188 0 0 937 0 0 376-938-1z" transform="matrix(1 0 0 -1 0 850)"></path></svg></a></div></div></div> -->
+
+  <svg class="main-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="811" height="350"><g class="hoverlayer"></g></svg></div></div></div></article></div></div></article>
+
+        </div>
+    </div>
+
+        <div class="govuk-grid-row">
+	  <div class="govuk-grid-column-full">
+	    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      </div>
+    </div>
+
+    <h2 class="govuk-heading-l">Applications for training</h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third"> 
+		<h2><a href="#">Applications started</a></h2>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">8,000</p>
+		<p class="govuk-caption-m">Feb 2021</p>
+		<p class="gov-uk body govuk-!-font-size-36 govuk-!-font-weight-bold" style="color:#d4351c;">-2%</p>
+		
+      </div>
+      <div class="govuk-grid-column-one-third">
+		<h2><a href="#">Completion rate</a></h2>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">40%</p>
+		<p class="govuk-caption-m">3,200 completed applications</p>
+		<p class="gov-uk body govuk-!-font-size-36 govuk-!-font-weight-bold" style="color:#00703c;">+4%</p>
+		
+      </div>
+      <div class="govuk-grid-column-one-third">
+		<h2><a href="#">Average time to offer</a></h2>
+		<p class="ovuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">8.6 days</p>
+		<p class="govuk-caption-m">Shortest: 2.8 days, Longest: 32 days</p>
+		<p class="gov-uk body govuk-!-font-size-36 govuk-!-font-weight-bold" style="color:#d4351c;">+1%</p>
+		
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third"> 
+		<h2><a href="#">Places offered</a></h2>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">2,000</p>
+		<p class="govuk-caption-m">1,200 rejected</p>
+		<p class="gov-uk body govuk-!-font-size-36 govuk-!-font-weight-bold" style="color:#00703c;">+4%</p>
+		
+      </div>
+      <div class="govuk-grid-column-one-third">
+		<h2><a href="#">Places accepted</a></h2>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">1,500</p>
+		<p class="govuk-caption-m">5% not accepted, 20% pending</p>
+		<p class="gov-uk body govuk-!-font-size-36 govuk-!-font-weight-bold" style="color:#00703c;">+4%</p>
+		
+      </div>
+      <div class="govuk-grid-column-one-third">
+		<h2><a href="#">Cost per transaction</a></h2>
+		<p class="ovuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">£32</p>
+		<p class="govuk-caption-m">Feb 2021</p>
+		<p class="gov-uk body govuk-!-font-size-36 govuk-!-font-weight-bold" style="color:#00703c;">-6%</p>
+		{{ govukDetails({
+		  summaryText: "How this is calculated",
+		  text: "Maths!"
+		}) }}
+      </div>
+    </div>
+
+
+    <div class="govuk-grid-row">
+	  <div class="govuk-grid-column-full">
+	    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      </div>
+    </div>
+
+
+
+    <div class="govuk-grid-row">
+    	<div class="govuk-grid-column-full">
+		<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    	</div>
+    </div>
+
+    <h2 class="govuk-heading-l">Applications by subject</h2>
+       <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+	  <div class="govuk-accordion__section ">
+	    <div class="govuk-accordion__section-header">
+	      <h2 class="govuk-accordion__section-heading">
+	        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+	          Filter by region
+	        </span>
+	      </h2>
+	    </div>
+	    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+			{{ govukCheckboxes({
+			  idPrefix: "organisation",
+			  name: "organisation",
+			  classes: "govuk-checkboxes--small",
+			  fieldset: {
+			    legend: {
+			      text: "Regions",
+			      isPageHeading: true,
+			      classes: "govuk-fieldset__legend--m"
+			    }
+			  },
+			  items: [
+			    {
+			      value: "east",
+			      text: "East of England"
+			    },
+			    {
+			      value: "london",
+			      text: "Greater London"
+			    },
+			    {
+			      value: "mideast",
+			      text: "Midland East"
+			    },
+			    {
+			      value: "northeast",
+			      text: "North East"
+			    },
+			    {
+			      value: "northwest",
+			      text: "North West"
+			    },
+			    {
+			      value: "southeast",
+			      text: "South East of England"
+			    },
+			    {
+			      value: "southwest",
+			      text: "North East"
+			    }
+			  ]
+			}) }}
+	    </div>
+	  </div>
+	</div>
+   <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+		<h3 class="govuk-heading-m">Maths</h3>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">10%</p>
+		<p class="govuk-caption-m">1,000 visitors</p>
+		<p class="gov-uk body govuk-!-font-size-27 govuk-!-font-weight-bold" style="color:#00703c;">+2%</p>
+      </div>
+      <div class="govuk-grid-column-one-third">
+		<h3 class="govuk-heading-m">Physics</h3>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">3%</p>
+		<p class="govuk-caption-m">500 visitors</p>
+		<p class="gov-uk body govuk-!-font-size-27 govuk-!-font-weight-bold" style="color:#d4351c;">-2%</p>
+      </div>
+      <div class="govuk-grid-column-one-third">
+		<h3 class="govuk-heading-m">Chemistry</h3>
+		<p class="ovuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">2%</p>
+		<p class="govuk-caption-m">250 visitors</p>
+		<p class="gov-uk body govuk-!-font-size-27 govuk-!-font-weight-bold">+0%</p>
+      </div>
+    </div>
+       <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+      	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<h3 class="govuk-heading-m">Languages</h3>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">10%</p>
+		<p class="govuk-caption-m">1,000 visitors</p>
+		<p class="gov-uk body govuk-!-font-size-27 govuk-!-font-weight-bold" style="color:#00703c;">+2%</p>
+      </div>
+      <div class="govuk-grid-column-one-third">
+      	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<h3 class="govuk-heading-m">Computing</h3>
+		<p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">3%</p>
+		<p class="govuk-caption-m">500 visitors</p>
+		<p class="gov-uk body govuk-!-font-size-27 govuk-!-font-weight-bold" style="color:#d4351c;">-2%</p>
+      </div>
+      <div class="govuk-grid-column-one-third">
+      	<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+		<h3 class="govuk-heading-m">Biology</h3>
+		<p class="ovuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">2%</p>
+		<p class="govuk-caption-m">250 visitors</p>
+		<p class="gov-uk body govuk-!-font-size-27 govuk-!-font-weight-bold">+0%</p>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+{% endblock %}
