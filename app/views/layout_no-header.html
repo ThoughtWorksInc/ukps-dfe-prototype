@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block headIcons %}
+  <link rel="shortcut icon" href="{{ asset_path }}images/gitfavicon.ico?0.18.3" type="image/x-icon" />
+{% endblock %}
+
+{% block head %}
+  <!--[if lte IE 8]><link href="/public/stylesheets/unbranded-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if gt IE 8]><!--><link href="/public/stylesheets/unbranded.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+  {% for stylesheetUrl in extensionConfig.stylesheets %}
+    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+  {% endfor %}
+{% endblock %}
+
+{% block header %}
+<div style="background-color:#f2f2f2;padding:1em 2em;">
+<h1 class="govuk-heading-l"> Illustration of the users inbox</h1>
+<a  href="/you-are-subscribed">Progress to the next page in this prototype journey</a> 
+</div>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

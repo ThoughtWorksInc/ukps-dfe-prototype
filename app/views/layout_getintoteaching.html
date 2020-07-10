@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block headIcons %}
+  <link rel="shortcut icon" href="{{ asset_path }}images/gitfavicon.ico?0.18.3" type="image/x-icon" />
+{% endblock %}
+
+{% block head %}
+  <!--[if lte IE 8]><link href="/public/stylesheets/unbranded-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if gt IE 8]><!--><link href="/public/stylesheets/getintoteaching.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+  {% for stylesheetUrl in extensionConfig.stylesheets %}
+    <link href="{{ stylesheetUrl }}" rel="stylesheet" type="text/css" />
+  {% endfor %}
+{% endblock %}
+
+{% block header %}
+<header role="banner" " class="mainHeader__title">
+    <a href="/" title="Back to the homepage" rel="home" class="git-logo" accesskey="1"><img src="https://getintoteaching.education.gov.uk/sites/all/themes/dfegit/images/logo.svg" alt="Get into teaching home page" height="33"></a>
+    <span class="tagline">Get into teaching with support and advice from the Department for Education.</span>
+</header>
+{% endblock %}
+{% block footer %}
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout_getintoteaching.html" %}
+
+
+
+{% block pageTitle %}
+  You are subscribed
+{% endblock %}
+
+{% block content %}
+
+ <div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+  	<div class="app-banner app-banner--success" aria-labelledby="success-message" data-module="govuk-error-summary" tabindex="-1" role="alert">
+      <div class="app-banner__message">
+        <h2 class="govuk-heading-m" id="success-message">
+          You will now receive hints, tips and news via email
+        </h2>
+      </div>
+    </div>
+  	<h1 class="govuk-heading-xl">Tailor the information you receive</h1>
+
+  	<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+	  	  <p>By answering a few more questions you can tailor the information we send you via email. For example you can get specific advice about the subjects you would like to teach and events happening in your local area.</p>
+
+	  	  <a role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8 defcontinuebtn " id="ContinueBtn" href="/end-of-email-example">Continue</a>
+
+		</div>
+	</div>
+
+
+  </main>
+</div>
+
+{% endblock %}

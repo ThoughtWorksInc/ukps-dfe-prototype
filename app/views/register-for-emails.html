@@ -1,0 +1,38 @@
+{% extends "layout_getintoteaching.html" %}
+
+{% block pageTitle %}
+  Performance dashboard - Get into teaching
+{% endblock %}
+
+{% block content %}
+<style>
+	
+</style>
+ <div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+  	<h1 class="govuk-heading-xl">
+    Get hints, tips and news via email
+  	</h1>
+  	<div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+	  	  <h2 class="govuk-heading-m">Subscribe to our newsletters to receive:</h2>
+	  	  <ul class="govuk-list govuk-list--bullet">
+	  	  	 <li>Stories, advice and information about life as a teacher</li>
+	  	  	 <li>Helpful tips and hints to guide you through applying for teacher training</li>
+	  	  	 <li>Invitations to free Train to Teach events and more</li>
+	  	  </ul>
+	  	  <form class="form" action="/check-your-email" method="post">
+	        <div class="govuk-form-group">
+		  		<label class="govuk-label govuk-label--m" for="email">
+		  			Email address
+		  		</label>
+		  		<input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+		  	</div>
+	        <button class="govuk-button defcontinuebtn" data-module="govuk-button">Continue</button>
+	      </form>
+		</div>
+	</div>
+  </main>
+</div>
+
+{% endblock %}

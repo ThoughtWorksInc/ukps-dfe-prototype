@@ -1,0 +1,136 @@
+// The unbranded stylesheet is used if you need to create pages in your
+// prototype without the GOV.UK branding.
+//
+// See localhost:3000/docs/templates/blank-unbranded
+
+// Import settings first so we can override them before importing all of GOV.UK Frontend
+// If you need to enable compatibility mode or the legacy palette, do that *before* this import.
+@import "node_modules/govuk-frontend/govuk/settings/all";
+
+// Override the default GOV.UK Frontend font stack
+$govuk-font-family: "HelveticaNeue", "Helvetica Neue", "Arial", "Helvetica", sans-serif;
+
+// Override the canvas background colour, which is normally grey to blend with the GOV.UK footer.
+$govuk-canvas-background-colour: $govuk-body-background-colour;
+
+@import "application";
+
+.tagline {
+	line-height: 1.2rem;
+	font-family: 'AktivGroteskW05-Regular', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	color: #000;
+	margin-left: 24px;
+	margin-left: 2rem;
+	width: 328px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-all;
+	word-break: break-word;
+}
+.mainHeader__title {
+    margin: 0;
+	padding:1em 2em;
+    border-bottom: 1px solid #ebebec;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.defcontinuebtn {
+	font-family: AktivGroteskW05-Bold,Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	min-width: 30%;
+	border: 2px solid transparent;
+	border-radius: 0;
+	background-color: #009964;
+	box-shadow: 0 2px 0 #003618;
+	text-align: left;
+	vertical-align: top;
+	cursor: pointer;
+	-webkit-appearance: none;
+	width: auto;
+	font-weight: 700;
+	min-height: auto;
+	background-image: url(/public/images/chevron-right.svg);
+	background-size: 1.125rem;
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+	font-size: 1.2rem;
+	line-height: 1;
+	padding-top: 13px;
+	padding-bottom: 8px;
+	margin-top: 10px!important;
+	margin-bottom: 50px!important;
+	color: #000000;
+	text-decoration: none;
+}
+.defcontinuebtn:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -2px;
+	right: -2px;
+	bottom: -4px;
+	left: -2px;
+	background: transparent;
+}
+.govuk-button:active, .govuk-button:hover, .govuk-button:link, .govuk-button:visited {
+  	color: #000000;
+  	text-decoration: none;
+}
+.govuk-button:focus, .govuk-button:hover {
+  	background-color: #009964;
+  	box-shadow: 0 0.1rem #009964;
+  	top: 0.2rem;
+}
+.govuk-button:focus {
+  	background-color: #009964;
+  	outline: 3px solid #ffbf47;
+	outline-offset: 0;
+}
+.app-banner--success {
+	text-size-adjust: 100%;
+	color: #0b0c0c;
+	border: 5px solid #00703c;
+	padding: 20px;
+	margin-bottom: 50px;
+	border-color: #00703c;
+}
+.app-banner__message {
+	text-size-adjust: 100%;
+	color: #0b0c0c;
+	font-family: GDS Transport,Arial,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 400;
+	font-size: 1.1875rem;
+	line-height: 1.31579;
+}
+.app-banner__message :last-child {
+	margin-bottom: 0;
+}
+
+.app-banner:focus {
+  outline: 3px solid #fd0;
+  outline-offset: 0;
+}
+@media (max-width: 770px){
+	.mainHeader__title .tagline {
+	    display: block;
+	    width: 100%;
+	    margin: 1rem 0 0 0;
+	    font-size: 0.9rem;
+	}
+	.mainHeader__title {
+	    padding-top: 1rem;
+	    display: block;
+	}
+}
